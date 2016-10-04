@@ -1,0 +1,31 @@
+From last section
+    - Why const char *?
+        - (const char) *, not const (char *)
+        - user knows string wont be modified
+        - compiler knows that string won't be modified (can make optimizations)
+            const char *x = "hi";
+            function1(x);
+            function2(x);
+        - thread safety? 
+    - static vs dynamic typecasting?
+        - C++
+            - casting from base class type to derived class type
+            - does additional check that the object is actually of the derived
+              class type
+
+From pset
+    - You know how to see comments, right?
+    - get_string() NULL check
+    - validation convention
+
+
+Arrays (little endian-ness)
+Pointers
+Asymptotic Notation
+Searches
+n^2 sorts
+recursion
+O(n log n) sorts
+O(n) sorts: radix sort, counting
+
+file i/o?
