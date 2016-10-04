@@ -19,12 +19,12 @@ int main (int argc, char* argv[])
     // basic error checking
     if (!x && !y) return 2;
 
-    // swaps
-    printf("x = %d\ny = %d\n", x, y);
+    // swaps...right?
+    p(x, y);
     printf("swapping...\n");
     swap(x, y);
     printf("swapped!\n");
-    printf("x = %d\ny = %d\n", x, y);
+    p(x, y);
 }
 
 // swaps 2 values
@@ -35,6 +35,7 @@ void swap(int a, int b)
     b = tmp;
 }
 
+// print two ints
 void p(int x, int y) {
     printf("x = %d\ny = %d\n", x, y);
 }

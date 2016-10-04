@@ -33,10 +33,10 @@ void swap(int* a, int* b)
     // goes to address stored in variable a, pulls value
     int tmp = *a;
 
-    // takes value stored at address from b, puts in a
+    // takes value stored at address from b, puts at address of a
     *a = *b;
 
-    // b is now value stored at address from a
+    // *b is now value from address from a
     *b = tmp;
 }
 

@@ -6,11 +6,16 @@ void mergesort(int *list, int len);
 void merge(int *list1, int *list2, int len1, int len2);
 
 int main() {
+    // test list to sort
     int list[] = {6,2,4,8,7,2,1,54,76,8,2,34,1,7,56,3,86,6};
     int len = sizeof(list) / sizeof(int);
-    p("unsorted list: ", list, len);
+    p("unsorted list:           ", list, len);
+
+    // sort pls
     mergesort(list, len);
-    p("unsorted list: ", list, len);
+
+    // sanity check
+    p("(hopefully) sorted list: ", list, len);
 }
 
 // prints a list prepended with s
@@ -26,39 +31,47 @@ void p(char *s, int *list, int len) {
 
 // woo O(n log n)
 void mergesort(int *list, int len) {
+    // base case
     if (len == 1) return;
+
+    // recursive case
     mergesort(list, len / 2);
+    // why (len - (len / 2))?
     mergesort(list + (len / 2), len - (len / 2));
+
     merge(list, list + (len / 2), len / 2, len - (len / 2));
 }
 
-// merges two lists, assumes list1 proceeds list2 in memory
+// merges two lists into list1
+// assumes list1 proceeds list2 in memory
 void merge(int *list1, int *list2, int len1, int len2) {
     
+    // copies the two sorted sublists into buffer arrays
     // this is inefficient
-    int a[len1];
-    int b[len2];
-    memcpy(a, list1, len1 * sizeof(int));
-    memcpy(b, list2, len2 * sizeof(int));
+    int buffer1[len1];
+    int buffer2[len2];
+    memcpy(buffer1, list1, len1 * sizeof(int));
+    memcpy(buffer2, list2, len2 * sizeof(int));
 
-    int i = 0, j = 0, k = 0;
+    // keep track of index of each array
+    int sortedIndex = 0, buf1Index = 0, buf2Index = 0;
 
     while(1) {
-        if (a[j] < b[k]) {
-            list1[i] = a[j];
-            j++;
+        if (buffer1[buf1Index] < buffer2[buf2Index]) {
+            list1[sortedIndex] = buffer1[buf1Index];
+            buf1Index++;
         } else {
-            list1[i] = b[k];
-            k++;
+            list1[sortedIndex] = buffer2[buf2Index];
+            buf2Index++;
         }
-        i++;
+        sortedIndex++;
         
         // are we done yet
-        if (j >= len1) {
-            memcpy(list1 + i, b + k, len2 - k);
+        if (buf1Index >= len1) {
+            memcpy(list1 + sortedIndex, buffer2 + buf2Index, len2 - buf2Index);
             return;
-        } else if (k >= len2) {
-            memcpy(list1 + i, a + j, len2 - j);
+        } else if (buf2Index >= len2) {
+            memcpy(list1 + sortedIndex, buffer1 + buf1Index, len2 - buf1Index);
             return;
         }
     }

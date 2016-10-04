@@ -1,38 +1,48 @@
 #include <stdio.h>
 
 int main() {
-    int x[] = {97, 98, 99};
-    char x2[] = {97, 98, 99};
+    // declaring the same array, right?
+    char i[] = {97, 98, 99};
     char c[] = {'a', 'b', 'c'};
     char c1[] = {'a', 'b', 'c', '\0'};
     char *c2 = "abc";
 
-    printf("x = %s\n", (char *) x);
-    printf("x2 = %s\n", (char *) x2);
+    // sanity check
+    printf("i = %s\n", (char *) i);
     printf("c = %s\n", (char *) c);
     printf("c1 = %s\n", (char *) c1);
     printf("c2 = %s\n", (char *) c2);
 
+
+    // ===================================================
+    // CHALLENGE PROBLEM
+    // what does this print? can we get it to print out the same as the others?
+    int i2[] = {97, 98, 99};
+    printf("i2 = %s\n", (char *) i2);
+    // ===================================================
+
     printf("\n");
 
-    printf("sizeof(x) = %lu\n", sizeof(x));
-    printf("sizeof(x2) = %lu\n", sizeof(x2));
+    // what will these print? why?
+    printf("sizeof(i) = %lu\n", sizeof(i));
     printf("sizeof(c) = %lu\n", sizeof(c));
     printf("sizeof(c1) = %lu\n", sizeof(c1));
     printf("sizeof(c2) = %lu\n", sizeof(c2));
+    printf("sizeof(i2) = %lu\n", sizeof(i2));
 
     printf("\n");
 
 
+    // these will all work, right? why or why not?
     /*
-    x[0] = 98;
-    x2[0] = 98;
+    i[0] = 98;
+    i2[0] = 98;
     c[0] = 98;
     c1[0] = 98;
     c2[0] = 98;
 
-    printf("x = %s\n", (char *) x);
-    printf("x2 = %s\n", (char *) x2);
+    printf("i = %s\n", (char *) i);
+    printf("i2 = %s\n", (char *) i2);
     printf("c = %s\n", (char *) c);
     printf("c1 = %s\n", (char *) c1);
     printf("c2 = %s\n", (char *) c2);
