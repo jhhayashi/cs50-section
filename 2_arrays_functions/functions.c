@@ -3,7 +3,6 @@
 
 // why use functions?
 
-
 // what are those?
 void print_x(void);
 
