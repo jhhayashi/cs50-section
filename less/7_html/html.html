@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head><title>HTML</title>
+<style type="text/css">
+<!--
+body {
+	font-family: Arial, sans-serif;
+	font-size: 8.5pt;
+}
+
+#wrapper {
+	margin: 0px; 
+	max-width: 1200px;
+	background-color: #fff;
+}
+
+#heading {
+	border-bottom: 1px solid #000;
+	margin: 10px 85px 10px 85px;
+}
+
+#contentbox {
+	margin-left: 90px;
+	margin-right: 95px;
+	top: 50px;
+}		
+
+#content1 {
+	float: left;
+	width:49%;
+}
+
+#content2 {
+	float: right;
+	width: 49%;
+}
+
+#sidebar1 {
+		position: absolute;
+		left:10px;
+		width:75px;
+		top:50px;
+		text-align: right;
+}
+
+#sidebar2 {
+	position: absolute;
+	right:10px;
+	width:75px;
+	top:50px;
+}
+
+.section {
+	border: 1px solid #000;
+	margin: 4px;
+	width: 100%;
+}
+
+.section th {
+	border: 1px solid #000;
+	color: #fff;
+	background-color: #0577bd;
+	font-size: 10pt;
+	
+}
+.section td {
+	font-family: Arial, sans-serif;
+	font-size: 8.5pt;
+	vertical-align: top;
+	border: 0;
+}
+.evenrow {
+	background-color: #eaf3fa;
+}
+
+h1 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14pt;
+}
+
+h3 {
+	margin: 0px 0px 3px 0px;
+	padding: 0px;
+	font-size: 11pt;
+	border-bottom: 1px solid #000;
+}
+
+h4 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 10.5pt;
+}
+
+.exp {
+	font-family: Arial, sans-serif;
+	border-top: 1px solid #000;
+	font-size: 7.5pt;
+	clear: both;
+	
+}
+.floatcontainer:after { 
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility:hidden; 
+}
+hr {
+	display: none;
+	}
+-->
+</style>
+</head>
+<body>
+<h2><a href="section_queue.html">Back</a></h2>
+<div id="wrapper">
+<div id="heading">
+<h1>HTML CHEAT SHEET</h1>
+</div>
+<div id="contentbox">
+<div id="content1">
+<table border="1" class="section">
+        <tr> 
+          <th>SYNTAX</th>
+        </tr>
+        <tr> 
+          <td><strong>Basic</strong></td>
+		  <tr><td>
+            HTML: &lt;tag&gt;&lt;/tagclose&gt;<em> or </em>&lt;tag&gt; <br /> 
+            XHTML: &lt;tag&gt;&lt;/tagclose&gt; <em>or </em>&lt;tag
+            /&gt; </td></tr>
+            <tr><td><strong>With an Attribute</strong></td></tr>
+             <tr><td>HTML: &lt;tag attribute=&quot;?&quot;&gt;<br />
+            XHTML: &lt;tag attribute=&quot;?&quot; / &gt;</td>
+        </tr>
+      </table>
+	       <table border="1" class="section">
+        <tr> 
+          <th colspan="2">BASIC</th>
+        </tr>
+        <tr> 
+          <td>&lt;body&gt;</td>
+          <td> the visible portion of the page</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;head&gt;</td>
+          <td>portion not displayed on the  page </td>
+        </tr>
+        <tr> 
+          <td>&lt;html&gt;</td>
+          <td>creates a html page </td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;title&gt;</td>
+          <td>shows the page name in the title bar </td>
+        </tr>
+      </table>
+	       <table border="1" class="section">
+        <tr> 
+          <th colspan="2">LINKS</th>
+        </tr>
+        <tr> 
+          <td>&lt;img src=&quot;URL&quot;&gt;*</td>
+          <td>displays an image</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;a href=&quot;#?&quot;&gt;*</td>
+          <td>link to anchor in current document</td>
+        </tr>
+        <tr> 
+          <td>&lt;a href=&quot;URL&quot;&gt;*</td>
+          <td>link to another document</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;a href=&quot;URL#?&quot;&gt;*</td>
+          <td>link to anchor in another document</td>
+        </tr>
+        <tr> 
+          <td>&lt;a href=&quot;mailto:EMAIL&quot;&gt;*</td>
+          <td>email link</td>
+        </tr>
+      </table>
+	      <table border="1" class="section">
+        <tr> 
+          <th colspan="2">STRUCTURE</th>
+        </tr>
+        <tr> 
+          <td>&lt;br&gt;*</td>
+          <td>line break</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;code&gt;</td>
+          <td>source code listing</td>
+        </tr>
+        <tr> 
+          <td>&lt;div&gt;</td>
+          <td>Formats structure or block of text </td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;em&gt;</td>
+          <td>italic text</td>
+        </tr>
+        <tr> 
+          <td>&lt;h1&gt;...&lt;h6&gt;</td>
+          <td>page headings from largest to smallest </td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;hr&gt;</td>
+          <td>horizontal rule</td>
+        </tr>
+        <tr> 
+          <td>&lt;p&gt;</td>
+          <td>paragraph</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;pre&gt;</td>
+          <td>preformatted text</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;span&gt;</td>
+          <td>Inline formatting</td>
+        </tr>
+        <tr> 
+          <td>&lt;strong&gt;</td>
+          <td>bold text</td>
+        </tr>
+        <tr class="evenrow">
+          <td>&lt;sub&gt;</td>
+          <td>subscript text</td>
+        </tr>
+        <tr> 
+          <td>&lt;sup&gt;</td>
+          <td>superscript text</td>
+        </tr>
+      </table>
+	 
+      <table border="1" class="section">
+        <tr> 
+          <th colspan="2">FRAMES</th>
+        </tr>
+        <tr> 
+          <td>&lt;frame&gt;</td>
+          <td>defines a single frame </td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;frameset&gt;</td>
+          <td>frame document</td>
+        </tr>
+        <tr> 
+          <td>&lt;iframe&gt;</td>
+          <td>inline frame</td>
+        </tr>
+      </table>
+</div>
+
+<div id="content2">
+
+	<table border="1" class="section">
+        <tr> 
+          <th colspan="2">HEAD</th>
+        </tr>
+        <tr> 
+          <td>&lt;link rel=&quot;stylesheet&quot; href=&quot;?&quot; type=&quot;text/css&quot;&gt; *</td>
+          <td>external CSS link </td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;script language=&quot;Javascript&quot; type=&quot;text/javascript&quot;&gt;</td>
+          <td>embedded javascript</td>
+        </tr>
+        <tr> 
+          <td>&lt;meta http-equiv=&quot;content-type&quot; content=&quot;?&quot;;
+            charset=&quot;?&quot;&gt;*</td>
+          <td>meta information</td>
+        </tr>
+      </table>
+	
+      <table border="1" class="section">
+        <tr> 
+          <th colspan="2">TABLES</th>
+        </tr>
+        <tr> 
+          <td>&lt;caption&gt;</td>
+          <td>table caption</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;table&gt;</td>
+          <td>defines a table</td>
+        </tr>
+        <tr> 
+          <td>&lt;tbody&gt;</td>
+          <td>body section of the table</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;td&gt;</td>
+          <td>table cell</td>
+        </tr>
+        <tr> 
+          <td>&lt;td colspan=&quot;?&quot;&gt;</td>
+          <td>number of columns cell spans</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;td rowspan=&quot;?&quot;&gt;</td>
+          <td>number of rows cell should spans</td>
+        </tr>
+        <tr> 
+          <td>&lt;tfoot&gt;</td>
+          <td> footer section of the table</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;th&gt;</td>
+          <td>table header cells</td>
+        </tr>
+        <tr> 
+          <td>&lt;th colspan=&quot;?&quot;&gt;</td>
+          <td>number of columns table header cell  spans</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;thead&gt;</td>
+          <td>the header section of the table</td>
+        </tr>
+        <tr> 
+          <td>&lt;tr&gt;</td>
+          <td>table row</td>
+        </tr>
+      </table>
+	
+      <table border="1" class="section">
+        <tr> 
+          <th colspan="2">LISTS</th>
+        </tr>
+        <tr> 
+          <td>&lt;dd&gt;</td>
+          <td>definition</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;dl&gt;</td>
+          <td>definition list</td>
+        </tr>
+        <tr> 
+          <td>&lt;dt&gt;</td>
+          <td>definition term</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;li&gt;</td>
+          <td>item in a list </td>
+        </tr>
+        <tr> 
+          <td>&lt;ol&gt;</td>
+          <td>ordered list</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;ul&gt;</td>
+          <td>unordered list</td>
+        </tr>
+      </table>
+	
+      <table border="1" class="section">
+        <tr> 
+          <th colspan="2">FORMS</th>
+        </tr>
+        <tr> 
+          <td>&lt;form&gt;</td>
+          <td> defines a form</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;fieldset&gt;</td>
+          <td> group of related form items</td>
+        </tr>
+        <tr> 
+          <td>&lt;input type=&quot;?&quot;&gt;*</td>
+          <td>form element (see input types at right) </td>
+        </tr>
+        <tr class="evenrow">
+          <td>&lt;option&gt;</td>
+          <td>menu item in a select box </td>
+        </tr>
+        <tr>
+          <td>&lt;select&gt;</td>
+          <td>drop-down list</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&lt;textarea&gt;</td>
+          <td>multi-row text area</td>
+        </tr>
+      </table>
+	
+      <table border="1" class="section">
+        <tr> 
+          <th colspan="2">SPECIAL CHARACTERS</th>
+        </tr>
+        <tr> 
+          <td>&amp;nbsp;</td>
+          <td> non-breaking space</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&amp;quot;</td>
+          <td>quotation mark</td>
+        </tr>
+        <tr> 
+          <td>&amp;amp;</td>
+          <td>ampersand</td>
+        </tr>
+        <tr class="evenrow"> 
+          <td>&amp;lt;</td>
+          <td>less than sign</td>
+        </tr>
+        <tr> 
+          <td>&amp;gt;</td>
+          <td>greater than sign</td>
+        </tr>
+      </table>
+</div>
+<div class="floatcontainer">
+<div class="exp">* Note: Does not require a closing 
+      tag</div>
+	  </div>
+	</div>
+
+
+<div id="sidebar1">
+<h3>Template</h3><hr> 
+      &lt;html&gt;<br> &lt;head&gt;<br> &lt;title&gt;&lt;/title&gt;<br> <em>Meta 
+      Tags<br>
+      CSS<br>
+      JavaScript</em><br> &lt;/head&gt;<br> &lt;body&gt;<br> <em>Content</em><br> 
+      &lt;/body&gt;<br> &lt;/html&gt; <br /> <br /> 
+	  <h3>CSS Media</h3><hr> 
+      all<br />
+      handheld<br />
+      print<br />
+      projection<br />
+      screen<br /> <br /> 
+	  <h3>Meta Types</h3><hr> 
+            http-equiv<br />
+      name<br /> <br /> 
+	  <h3>Lists</h3>
+      <hr> &lt;ol&gt;<br /> &lt;li&gt;<br /> &lt;/li&gt;<br /> &lt;/ol&gt; <br /> 
+      <br /> &lt;ul&gt;<br /> &lt;li&gt;<br /> &lt;/li&gt;<br /> &lt;/ul&gt;
+</div>
+
+<div id="sidebar2">
+<h3>Table</h3>
+      <hr> &lt;table&gt;<br /> <br /> &lt;thead&gt;<br /> &lt;tr&gt;<br /> &lt;th&gt;<br /> 
+      &lt;/th&gt;<br /> &lt;/tr&gt;<br /> &lt;/thead&gt;<br /> <br /> &lt;tbody&gt;<br /> 
+      &lt;tr&gt;<br /> &lt;td&gt;<br /> &lt;/td&gt;<br /> &lt;/tr&gt;<br /> &lt;/tbody&gt;<br /> 
+      <br /> &lt;tfoot&gt;<br /> &lt;tr&gt;<br /> &lt;td&gt;<br /> &lt;/td&gt;<br /> 
+      &lt;/tr&gt;<br /> &lt;/tfoot&gt;<br /> <br /> &lt;/table&gt; <br /> <br /> 
+      <h3>Input Types</h3>
+      <hr>
+      button<br />
+      checkbox<br />
+      file<br />
+      hidden<br />
+      image<br />
+      password<br />
+      radio<br />
+      reset<br />
+      submit<br />
+      text<br />	
+</div>
+</div>
+</body>
+</html>
+

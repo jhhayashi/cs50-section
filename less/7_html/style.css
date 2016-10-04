@@ -1,0 +1,24 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    color: navy;
+}
+
+#css_body {
+    background-color: #00FF00;
+}
+
+#css_title {
+    width: 100%;
+    animation: blinker 1s linear infinite;
+    font-size: 3000%;
+    color: #FF0000;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
