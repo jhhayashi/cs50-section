@@ -1,0 +1,45 @@
+Week 0
+	Scratch
+
+Week 1
+	Variables and data types
+	Conditions
+	Boolean expressions
+	Loops
+	Compiling
+	Overflow
+	Floating-point imprecision
+
+Week 2
+	Debugging
+	Command-line arguments
+	Arrays
+	Functions
+	Scope
+
+Week 3
+	Asymptotic notation
+	Linear search
+	Binary search
+	Bubble sort
+	Selection sort
+	Insertion sort
+	Merge sort
+	Recursion
+
+Week 4
+	Redirection and pipes
+	File I/O
+	Memory management
+	Heap
+	Stack
+	Pointers
+	Structures
+
+Week 5
+	Linked lists
+	Hash tables
+	Tries
+	Stacks
+	Queues
+	Huffman coding
