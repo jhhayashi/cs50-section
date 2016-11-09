@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+    echo "1: MVC Image"
+    echo "2: SQL Operators"
+    exit 1
+fi
+
+function openApp {
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app=$1
+}
+
+if [ "$1" == "1" ]
+then
+    openApp http://i.stack.imgur.com/ocEWx.png
+    exit 0
+elif [ "$1" == "2" ]
+then
+    openApp https://www.tutorialspoint.com/sql/sql-operators.htm
+    exit 0
+fi
