@@ -1,0 +1,87 @@
+<!doctype html>
+<head>
+	<title>DOM</title>
+	<link href="https://staff.cs50.net/css/asciidoctor.css" rel="stylesheet"/>
+	<link href="https://staff.cs50.net/css/asciidoctor-coderay.css" rel="stylesheet"/>
+	<link href="https://staff.cs50.net/css/treeview.css" rel="stylesheet">
+
+	<script src="https://staff.cs50.net/js/yahoo-dom-event.js" ></script>
+	<script src="https://staff.cs50.net/js/treeview-min.js" ></script>
+</head>
+<body>
+	<div class="sect2">
+	<h3 id="the_dom"><a class="link" href="#the_dom">The DOM</a></h3>
+	<div class="ulist">
+	<ul>
+	<li>
+	<p>The <code>DOM</code>, or document object model, is a hierarchical way of laying out information. If, for example, we have a webpage in <code>HTML</code> like this:</p>
+	<div class="listingblock">
+	<div class="content">
+	<pre class="CodeRay"><code class="html language-html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+		<span class="tag">&lt;head&gt;</span>
+			<span class="tag">&lt;title</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Hey Rob!<span class="tag">&lt;/title&gt;</span>
+		<span class="tag">&lt;/head&gt;</span>
+		<span class="tag">&lt;body&gt;</span>
+			<span class="tag">&lt;div&gt;</span>
+				<span class="tag">&lt;img</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">pic</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">rob.jpg</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">alt</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">rob</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+			<span class="tag">&lt;/div&gt;</span>
+			<span class="tag">&lt;div&gt;</span>
+				<span class="tag">&lt;p</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">quote</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>There is no happiness in the world, only rice...<span class="tag">&lt;/p&gt;</span>
+			<span class="tag">&lt;/div&gt;</span>
+		<span class="tag">&lt;/body&gt;</span>
+	<span class="tag">&lt;/html&gt;</span></code></pre>
+	</div>
+	</div>
+	<div class="paragraph">
+	<p>then its <code>DOM</code> will be a tree like this:</p>
+	</div>
+	</li>
+	</ul>
+	</div>
+	<div class="imageblock" style="text-align: center">
+	<div class="content">
+	<img src="https://staff.cs50.net/img/DOM.jpg" alt="DOM">
+	</div>
+	</div>
+	<div class="ulist">
+	<ul>
+	<li>
+	<p>What&#8217;s cool about <code>JS</code> is we can change the DOM dynamically without having to reload the page! With code like this:</p>
+	<div class="listingblock">
+	<div class="content">
+	<pre class="CodeRay"><code class="javascript language-javascript"><span class="tag">&lt;script&gt;</span>
+	<span class="inline">    <span class="keyword">var</span> title = document.getElementById(<span class="string"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>);
+		title.innerHTML = <span class="string"><span class="delimiter">&quot;</span><span class="content">David</span><span class="delimiter">&quot;</span></span>;
+
+		<span class="keyword">var</span> pic = document.getElementById(<span class="string"><span class="delimiter">&quot;</span><span class="content">pic</span><span class="delimiter">&quot;</span></span>);
+		pic.src = <span class="string"><span class="delimiter">&quot;</span><span class="content">david.jpg</span><span class="delimiter">&quot;</span></span>;
+
+		<span class="keyword">var</span> alt = document.getElementById(<span class="string"><span class="delimiter">&quot;</span><span class="content">pic</span><span class="delimiter">&quot;</span></span>);
+		alt.alt = <span class="string"><span class="delimiter">&quot;</span><span class="content">david</span><span class="delimiter">&quot;</span></span>;
+
+		document.getElementById(<span class="string"><span class="delimiter">&quot;</span><span class="content">quote</span><span class="delimiter">&quot;</span></span>).innerHTML = <span class="string"><span class="delimiter">&quot;</span><span class="content">alllllright</span><span class="delimiter">&quot;</span></span>;</span>
+	<span class="tag">&lt;/script&gt;</span></code></pre>
+	</div>
+	</div>
+	<div class="paragraph">
+	<p>the <code>DOM</code> changes:</p>
+	</div>
+	</li>
+	</ul>
+	</div>
+	<div class="imageblock" style="text-align: center">
+	<div class="content">
+	<img src="https://staff.cs50.net/img/JS_DOM_2.jpg" alt="JS DOM 2">
+	</div>
+	</div>
+	<div class="ulist">
+	<ul>
+	<li>
+	<p>Of course, there are many other things <code>JS</code> can do. In lecture, for example, David talks about <code>JS</code> use in validation. For example, if I have a form, instead of having to <code>apologize()</code> like last week, we can actually dynamically validate and <em>alert</em> a user if their input doesn&#8217;t pass certain conditions. Do check <a href="http://d2o9nyf4hwsci4.cloudfront.net/2014/fall/lectures/9/w/notes9w/notes9w.html#javascript_validation">here</a> for the example from class!</p>
+	</li>
+	</ul>
+	</div>
+	</div>
+	</div>
+	</div>
+</body>

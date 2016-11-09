@@ -1,0 +1,6 @@
+- js syntax, scoping
+- DOM
+- interaction between js and DOM
+- async, function queue
+- callbacks
+- Future: promises (ES6), async await (ES2017)
